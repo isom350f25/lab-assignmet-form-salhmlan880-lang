@@ -1,5 +1,5 @@
 <html>
-
+ 
 <body>
     <div>
     <h1>Employee Detail for {{ employee.name }}</h1>
@@ -10,10 +10,10 @@
     <p><strong>Phone Number:</strong> {{ employee.phone_number }}</p>
     <a href="{% url 'employee_list' %}">Back to Employee List</a>
     </div>
-
+ 
     <div>
-    <h2>Projects</h2>
-    <ul>   
+    <h2>Projects</h2> <a href="{% url 'project_create' employee.id %}">Add Project</a>
+    <ul>  
     {% for p in projects %}
         <li>{{ p.name }} <br>
             Start Date: {{ p.start_date }} <br>

@@ -1,0 +1,19 @@
+<html>
+<head>
+    <title>Add Project</title>
+</head>
+<body>
+ 
+<h2>Add Project for {{ employee.name }}</h2>
+ 
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit">
+</form>
+ 
+<p>
+    <a href="{% url 'employee_detail' employee.id %}">Back to Employee</a>
+</p>
+</body>
+</html>
